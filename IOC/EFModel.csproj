@@ -76,6 +76,7 @@
     <Compile Include="OEMRTest.cs">
       <DependentUpon>OEMRModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PageResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

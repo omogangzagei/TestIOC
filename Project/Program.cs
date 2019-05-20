@@ -10,6 +10,7 @@ using Microsoft.Practices.Unity.Configuration;
 using BussinessInterface;
 using BussinessServer;
 
+
 namespace Project
 {
     class Program
@@ -39,14 +40,19 @@ namespace Project
             UnityConfigurationSection unity = (UnityConfigurationSection)ConfigurationManager.GetSection(UnityConfigurationSection.SectionName);
             UnityContainer unityContainer = new UnityContainer();
             unity.Configure(unityContainer, "MyContainer");
+            //unityContainer.AddExtension(new Diagnostic());
+            //IBaseService sever = unityContainer.Resolve<IBaseService>();
 
-            IBaseService sever = unityContainer.Resolve<IBaseService>();
-            //using (IBaseService sever= unityContainer.Resolve<IBaseService>())
-            //{
-            //    OEMRTest test = new OEMRTest();
-            //    test.Name = "111";
-            //    sever.Insert<OEMRTest>(test);
-            //}
+            using (IBaseService sever = unityContainer.Resolve<IBaseService>())
+            {
+                //OEMRTest test = new OEMRTest();
+                //test.Name = "111";
+                //sever.Insert<OEMRTest>(test);
+                //OEMRTest test= sever.Find<OEMRTest>(2);
+                PageResult<OEMRTest> pageResult = sever.QueryPage<OEMRTest, int>(t => t.ID > 2, 3, 1, t => t.ID, true);
+                   
+            }
+            
 
 
 

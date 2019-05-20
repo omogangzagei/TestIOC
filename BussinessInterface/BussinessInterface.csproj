@@ -43,5 +43,11 @@
     <Compile Include="IBaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IOC\EFModel.csproj">
+      <Project>{949990E0-D221-4F1A-BBB6-2138EC11D524}</Project>
+      <Name>EFModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
