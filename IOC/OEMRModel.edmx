@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OEMRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="OEMRSysDictionry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DicCode" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DicName" Type="nvarchar(max)" />
+          <Property Name="DicValue" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DicShowValue" Type="nvarchar(max)" />
+          <Property Name="DicIsValidity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DicRemark" Type="nvarchar(max)" />
+          <Property Name="DicRemark1" Type="nvarchar(max)" />
+          <Property Name="DicRemark2" Type="nvarchar(max)" />
+          <Property Name="DicRemark3" Type="nvarchar(max)" />
+          <Property Name="DicRemark4" Type="nvarchar(max)" />
+          <Property Name="DicRemark5" Type="nvarchar(max)" />
+          <Property Name="DicRemark6" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="OEMRSysMenu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MenuShowName" Type="nvarchar(max)" />
+          <Property Name="MenuLevel" Type="int" />
+          <Property Name="MenuLink" Type="nvarchar(max)" />
+          <Property Name="MenuIcon" Type="nvarchar(max)" />
+          <Property Name="MenuSort" Type="nvarchar(max)" />
+          <Property Name="MenuIsValidity" Type="int" />
+          <Property Name="MenuRemark" Type="nvarchar(max)" />
+          <Property Name="MenuRemark1" Type="nvarchar(max)" />
+          <Property Name="MenuRemark2" Type="nvarchar(max)" />
+          <Property Name="MenuRemark3" Type="nvarchar(max)" />
+          <Property Name="MenuRemark4" Type="nvarchar(max)" />
+          <Property Name="MenuRemark5" Type="nvarchar(max)" />
+          <Property Name="MenuRemark6" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="OEMRSysOption">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OptionCode" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OptionName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OptionValue" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OptionIsValidity" Type="int" Nullable="false" />
+          <Property Name="OptionRemark" Type="nvarchar(max)" />
+          <Property Name="OptionRemark1" Type="nvarchar(max)" />
+          <Property Name="OptionRemark2" Type="nvarchar(max)" />
+          <Property Name="OptionRemark3" Type="nvarchar(max)" />
+          <Property Name="OptionRemark4" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OptionRemark5" Type="nvarchar(max)" />
+          <Property Name="OptionRemark6" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="OEMRTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="OEMRModelStoreContainer">
+          <EntitySet Name="OEMRSysDictionry" EntityType="Self.OEMRSysDictionry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OEMRSysMenu" EntityType="Self.OEMRSysMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OEMRSysOption" EntityType="Self.OEMRSysOption" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OEMRTest" EntityType="Self.OEMRTest" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OEMRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="OEMRSysDictionry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DicCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DicName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DicShowValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicIsValidity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DicRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicRemark1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicRemark2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicRemark3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicRemark4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicRemark5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DicRemark6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OEMRSysMenu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MenuShowName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuLevel" Type="Int32" />
+          <Property Name="MenuLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuIcon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuSort" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuIsValidity" Type="Int32" />
+          <Property Name="MenuRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuRemark1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuRemark2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuRemark3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuRemark4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuRemark5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MenuRemark6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OEMRSysOption">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OptionCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OptionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OptionValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OptionIsValidity" Type="Int32" Nullable="false" />
+          <Property Name="OptionRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionRemark1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionRemark2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionRemark3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionRemark4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OptionRemark5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OptionRemark6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OEMRTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="OEMREntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="OEMRSysDictionry" EntityType="Self.OEMRSysDictionry" />
+          <EntitySet Name="OEMRSysMenu" EntityType="Self.OEMRSysMenu" />
+          <EntitySet Name="OEMRSysOption" EntityType="Self.OEMRSysOption" />
+          <EntitySet Name="OEMRTest" EntityType="Self.OEMRTest" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OEMRModelStoreContainer" CdmEntityContainer="OEMREntities1">
+          <EntitySetMapping Name="OEMRSysDictionry">
+            <EntityTypeMapping TypeName="OEMRModel.OEMRSysDictionry">
+              <MappingFragment StoreEntitySet="OEMRSysDictionry">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DicCode" ColumnName="DicCode" />
+                <ScalarProperty Name="DicName" ColumnName="DicName" />
+                <ScalarProperty Name="DicValue" ColumnName="DicValue" />
+                <ScalarProperty Name="DicShowValue" ColumnName="DicShowValue" />
+                <ScalarProperty Name="DicIsValidity" ColumnName="DicIsValidity" />
+                <ScalarProperty Name="DicRemark" ColumnName="DicRemark" />
+                <ScalarProperty Name="DicRemark1" ColumnName="DicRemark1" />
+                <ScalarProperty Name="DicRemark2" ColumnName="DicRemark2" />
+                <ScalarProperty Name="DicRemark3" ColumnName="DicRemark3" />
+                <ScalarProperty Name="DicRemark4" ColumnName="DicRemark4" />
+                <ScalarProperty Name="DicRemark5" ColumnName="DicRemark5" />
+                <ScalarProperty Name="DicRemark6" ColumnName="DicRemark6" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OEMRSysMenu">
+            <EntityTypeMapping TypeName="OEMRModel.OEMRSysMenu">
+              <MappingFragment StoreEntitySet="OEMRSysMenu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="MenuShowName" ColumnName="MenuShowName" />
+                <ScalarProperty Name="MenuLevel" ColumnName="MenuLevel" />
+                <ScalarProperty Name="MenuLink" ColumnName="MenuLink" />
+                <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+                <ScalarProperty Name="MenuSort" ColumnName="MenuSort" />
+                <ScalarProperty Name="MenuIsValidity" ColumnName="MenuIsValidity" />
+                <ScalarProperty Name="MenuRemark" ColumnName="MenuRemark" />
+                <ScalarProperty Name="MenuRemark1" ColumnName="MenuRemark1" />
+                <ScalarProperty Name="MenuRemark2" ColumnName="MenuRemark2" />
+                <ScalarProperty Name="MenuRemark3" ColumnName="MenuRemark3" />
+                <ScalarProperty Name="MenuRemark4" ColumnName="MenuRemark4" />
+                <ScalarProperty Name="MenuRemark5" ColumnName="MenuRemark5" />
+                <ScalarProperty Name="MenuRemark6" ColumnName="MenuRemark6" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OEMRSysOption">
+            <EntityTypeMapping TypeName="OEMRModel.OEMRSysOption">
+              <MappingFragment StoreEntitySet="OEMRSysOption">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OptionCode" ColumnName="OptionCode" />
+                <ScalarProperty Name="OptionName" ColumnName="OptionName" />
+                <ScalarProperty Name="OptionValue" ColumnName="OptionValue" />
+                <ScalarProperty Name="OptionIsValidity" ColumnName="OptionIsValidity" />
+                <ScalarProperty Name="OptionRemark" ColumnName="OptionRemark" />
+                <ScalarProperty Name="OptionRemark1" ColumnName="OptionRemark1" />
+                <ScalarProperty Name="OptionRemark2" ColumnName="OptionRemark2" />
+                <ScalarProperty Name="OptionRemark3" ColumnName="OptionRemark3" />
+                <ScalarProperty Name="OptionRemark4" ColumnName="OptionRemark4" />
+                <ScalarProperty Name="OptionRemark5" ColumnName="OptionRemark5" />
+                <ScalarProperty Name="OptionRemark6" ColumnName="OptionRemark6" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OEMRTest">
+            <EntityTypeMapping TypeName="OEMRModel.OEMRTest">
+              <MappingFragment StoreEntitySet="OEMRTest">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
